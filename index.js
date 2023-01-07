@@ -18,6 +18,17 @@ app.get('/',(req,res)=>{
     }
 })
 
+app.get('/aws',(req,res)=>{
+    try {
+        let {data}=req.query
+
+        res.json({entered_data:data})
+        
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 
 app.listen(PORT,()=>{
     console.log(`listening on post ${PORT}`);
