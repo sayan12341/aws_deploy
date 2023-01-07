@@ -20,9 +20,10 @@ app.get('/',(req,res)=>{
 
 app.get('/aws',(req,res)=>{
     try {
-        let {data}=req.query
+        let {q}=req.query
+        console.log(q)
 
-        res.json({entered_data:data})
+        res.json({entered_data:q})
         
     } catch (error) {
         console.log(error)
